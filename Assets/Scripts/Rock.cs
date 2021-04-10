@@ -9,10 +9,7 @@ public class Rock : MonoBehaviour
 {
     [Header("Characteristics")] 
     [SerializeField]
-    private float _speed = 4f;
-    private float _nextRock = -1f;
-    private float _rockRate = 1f;
-    public GameObject _rockPrefab;
+    private float _speed = 6f;
     
     // Start is called before the first frame update
     void Start()
@@ -29,21 +26,16 @@ public class Rock : MonoBehaviour
     //movement only in the right direction
     void Movement()
     {
-        transform.Rotate(new Vector3(0f, 0f, 3f * Time.deltaTime), Space.Self);
+        //TODO: add rotation
+        
         transform.Translate(Vector3.right * _speed * Time.deltaTime);
 
         //setting the borders
         //TODO: возможно надо подумать, как сделать посимпатичнее этот момент
+        
         if(transform.position.x >19.5f)
         {
             Destroy(this.gameObject);
-        }
-    
-    //range
-    if(Time.time > _nextRock)
-        {
-            _nextRock = Time.time + _rockRate;
-            Instantiate(_rockPrefab, transform.position + new Vector3(-5f, 0f, 0f), Quaternion.identity);
         }
     }
 
