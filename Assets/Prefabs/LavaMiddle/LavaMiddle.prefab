@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2142127957122251382, guid: 3dab76b1231b70a4f8d54476285b38cb, type: 3}
       propertyPath: m_Name
-      value: Lava
+      value: LavaMiddle
       objectReference: {fileID: 0}
     - target: {fileID: 2142127957122251383, guid: 3dab76b1231b70a4f8d54476285b38cb, type: 3}
       propertyPath: m_RootOrder

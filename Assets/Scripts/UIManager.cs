@@ -5,18 +5,22 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    private int _score = 0;
+    public int _score = 0;
+    
     [SerializeField] 
     private Text _scoreText;
-
-    private int _health = 5;
     [SerializeField] 
     private Text _healthText;
+    [SerializeField]
+    private Text _gameOverText;
+    
+    private Player _player;
     
     void Start()
     {
         _scoreText.text = "Score: " + _score;
-        _healthText.text = "Lives: " + _health;
+        _healthText.text = "Lives: 5";
+        _gameOverText.gameObject.SetActive(false);
     }
     
     void Update()
@@ -32,7 +36,12 @@ public class UIManager : MonoBehaviour
 
     public void UpdateHealth(int health)
     {
-        _health += health; 
-        _healthText.text = "Lives: " + _health;
+      //  _player._health += health; 
+        _healthText.text = "Lives: " + health;
+    }
+
+    public void ShowGameOver()
+    {
+        _gameOverText.gameObject.SetActive(true);
     }
 }

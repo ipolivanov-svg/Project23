@@ -44,18 +44,13 @@ public class Rock : MonoBehaviour
         //if it collides with Player
         if (other.CompareTag("Player"))
         {
-            Destroy(other.gameObject);
+            other.GetComponent<Player>().Damage();
+            Destroy(this.gameObject);
         }
         //if it's Fire
         else if (other.CompareTag("Blast"))
         {
-            if (other.name.Contains("Fire"))
-            { //destroys the vaccine if only it's not UV
-                Destroy(this.gameObject);
-            }
-            //TODO: думала сделать еще вариант плеваться кислотой, от которой камню урона нет
-            
-            //in both conditions blast is gone after collision
+            Destroy(this.gameObject);
             Destroy(other.gameObject);
         }
         else if (other.CompareTag("Surroundings"))
