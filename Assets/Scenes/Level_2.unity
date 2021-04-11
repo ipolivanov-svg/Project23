@@ -1558,13 +1558,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1178807402}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a603646db1bb62246b0a01392b52c27e, type: 3}
+  m_Script: {fileID: 11500000, guid: 02c79a9cde625f747b0724e944c80d2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _delay: 2
+  _delay: 1
   _rockPrefab: {fileID: 2819889501748049530, guid: 8524b5cc1edf23b4ca106100d4dcfe30, type: 3}
   _nextRock: -1
-  _rockRate: 0.8
+  _rockRate: 0.85
 --- !u!4 &1178807404
 Transform:
   m_ObjectHideFlags: 0

@@ -12,11 +12,6 @@ public class SpawnManagerL2: MonoBehaviour
     [SerializeField] private float _nextRock = -1f;
     [SerializeField] private float _rockRate = 0.85f;
 
-    [Header("Lava: parameters")]
-    [SerializeField] private GameObject _lavaPrefab;
-    [SerializeField] private float _nextLava = -1f;
-    [SerializeField] private float _lavaRate = 1f;
-
     //the mode that activates an infinite spawning; always true
     private bool _spawningON = true;
     
@@ -29,7 +24,6 @@ public class SpawnManagerL2: MonoBehaviour
     void Update()
     {
         StartCoroutine(SpawnRockSystem());
-        StartCoroutine(SpawnLavaSystem());
     }
     
     IEnumerator SpawnRockSystem()
@@ -43,17 +37,6 @@ public class SpawnManagerL2: MonoBehaviour
             Instantiate(_rockPrefab, new Vector3(-9.80000019f,1f,-10.1599998f), Quaternion.identity);
            //wait for 2 seconds
            yield return new WaitForSeconds(_delay); 
-        }
-    }
-
-    IEnumerator SpawnLavaSystem()
-    {
-        while (_spawningON && Time.time > _nextLava)
-        {
-            _nextLava = Time.time + _lavaRate;
-            //CHANGE coordinates manually for every new position
-            Instantiate(_lavaPrefab, new Vector3(2.47286224f,0.150000006f,2.04999995f), Quaternion.identity);
-            yield return new WaitForSeconds(0.5f); 
         }
     }
 }
