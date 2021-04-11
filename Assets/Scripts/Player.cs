@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         //starting point
-        transform.position = new Vector3(0f, 1f, 0f);
+        transform.position = new Vector3(10.8f, 1f, -11.6f);
         
         //Jump settings
         rb = GetComponent<Rigidbody>(); //assigning Rigidbody component
@@ -62,27 +62,27 @@ public class Player : MonoBehaviour
         
         //setting the borders
         //on x axis
-        if(transform.position.x >19.5f)
+        if(transform.position.x >11.99f)
         {
-            transform.position = new Vector3(19.5f,
+            transform.position = new Vector3(11.99f,
                 y: transform.position.y, z: transform.position.z);
         }
-        else if(transform.position.x < -19.5f)
+        else if(transform.position.x < -11.99f)
         {
-            transform.position = new Vector3(-19.5f,
+            transform.position = new Vector3(-11.99f,
                 y: transform.position.y, z: transform.position.z);
         }
         
         //on z axis
-        else if(transform.position.z > 19.5f)
+        else if(transform.position.z > 12f)
         {
             transform.position = new Vector3(transform.position.x,
-                y: transform.position.y, z: 19.5f);
+                y: transform.position.y, z: 12f);
         }
-        else if(transform.position.z < -19.5f)
+        else if(transform.position.z < -12f)
         {
             transform.position = new Vector3(transform.position.x,
-                y: transform.position.y, z: -19.5f);
+                y: transform.position.y, z: -12f);
         }
         
         //on y axis
