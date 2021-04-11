@@ -57,7 +57,10 @@ public class Rock : MonoBehaviour
             
             //in both conditions blast is gone after collision
             Destroy(other.gameObject);
-            
+        }
+        else if (other.CompareTag("Surroundings"))
+        {
+            Destroy(this.gameObject);
         }
     }
 }

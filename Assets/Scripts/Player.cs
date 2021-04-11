@@ -26,7 +26,9 @@ public class Player : MonoBehaviour
     public float _fireRate = 0.5f;
     public GameObject _firePrefab;
 
-    [Header("External")] [SerializeField] private UIManager _uiManager;
+    [Header("External")] 
+    [SerializeField] 
+    private UIManager _uiManager;
 
     void Start()
     {
@@ -130,5 +132,10 @@ public class Player : MonoBehaviour
     public void RelayScore(int score)
     {
         _uiManager.AddScore(score);
+    }
+
+    public void RelayHealth(int health)
+    {
+        _uiManager.UpdateHealth(health);
     }
 }
