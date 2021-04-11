@@ -26,6 +26,8 @@ public class Player : MonoBehaviour
     public float _fireRate = 0.5f;
     public GameObject _firePrefab;
 
+    [Header("External")] [SerializeField] private UIManager _uiManager;
+
     void Start()
     {
         //starting point
@@ -100,6 +102,7 @@ public class Player : MonoBehaviour
         //when the Player is on the ground isGrounded = true
         _isGrounded = true;
     }
+    
     void Jump()
     {
         //creating a jump
@@ -112,7 +115,7 @@ public class Player : MonoBehaviour
             _nextJump = Time.time + _jumpRate;
         }
     }
-
+    
     void Fire()
     {
         if(Input.GetKeyDown(KeyCode.P) && Time.time > _nextFire)
@@ -122,5 +125,10 @@ public class Player : MonoBehaviour
             Instantiate(_firePrefab, transform.position + new Vector3(-0.1f, 1f, 0.5f),
                 Quaternion.identity);
         }
+    }
+
+    public void RelayScore(int score)
+    {
+        _uiManager.AddScore(score);
     }
 }
