@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     private float _speed = 2f;
     Rigidbody rb;
     
+    
     [Header ("Jump Parameters")]
     public Vector3 jump;
     public float _jumpRate = 1f;
