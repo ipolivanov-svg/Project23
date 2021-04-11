@@ -180,7 +180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8169669679232353089, guid: 2877c47eb9807b74aab3e436562012f4, type: 3}
       propertyPath: _speed
-      value: 8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8169669679232353089, guid: 2877c47eb9807b74aab3e436562012f4, type: 3}
       propertyPath: _jumpRate
@@ -193,7 +193,7 @@ PrefabInstance:
     - target: {fileID: 8169669679232353089, guid: 2877c47eb9807b74aab3e436562012f4, type: 3}
       propertyPath: _uiManager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 912437466}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2877c47eb9807b74aab3e436562012f4, type: 3}
 --- !u!1 &39999721
@@ -1462,6 +1462,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307208657}
     m_Modifications:
+    - target: {fileID: 608913422534345222, guid: b945bff1ece46764090edc16f82e5bdc, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 608913422534345222, guid: b945bff1ece46764090edc16f82e5bdc, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3463091013394676920, guid: b945bff1ece46764090edc16f82e5bdc, type: 3}
       propertyPath: m_Name
       value: Coin (1)
