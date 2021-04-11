@@ -9,7 +9,7 @@ public class SpawnManagerL1 : MonoBehaviour
     [SerializeField] private float _delay = 1f;
     [SerializeField] private GameObject _rockPrefab;
     [SerializeField] private float _nextRock = -1f;
-    [SerializeField] private float _rockRate = 0.85f;
+    [SerializeField] private float _rockRate = 1.5f;
 
     //the mode that activates an infinite spawning; always true
     private bool _spawningON = true;
