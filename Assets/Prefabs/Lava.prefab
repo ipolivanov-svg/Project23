@@ -114,6 +114,22 @@ PrefabInstance:
       propertyPath: m_AreaSize.y
       value: 11.840261
       objectReference: {fileID: 0}
+    - target: {fileID: 3508013932714583738, guid: bff8b32a28938234ca3c5ea9a9d05240, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 15.694109
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508013932714583738, guid: bff8b32a28938234ca3c5ea9a9d05240, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 5.8941092
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508013932714583738, guid: bff8b32a28938234ca3c5ea9a9d05240, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 0.22264385
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508013932714583738, guid: bff8b32a28938234ca3c5ea9a9d05240, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 0.65999997
+      objectReference: {fileID: 0}
     - target: {fileID: 4885646716203391134, guid: bff8b32a28938234ca3c5ea9a9d05240, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -175,6 +191,22 @@ PrefabInstance:
     - target: {fileID: 729806763959394828, guid: c0433c0e6ad9c624e9f28571343ef20f, type: 3}
       propertyPath: m_AreaSize.x
       value: 9.596427
+      objectReference: {fileID: 0}
+    - target: {fileID: 729806763959394828, guid: c0433c0e6ad9c624e9f28571343ef20f, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 2.1237997e-19
+      objectReference: {fileID: 0}
+    - target: {fileID: 729806763959394828, guid: c0433c0e6ad9c624e9f28571343ef20f, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 0.052734375
+      objectReference: {fileID: 0}
+    - target: {fileID: 729806763959394828, guid: c0433c0e6ad9c624e9f28571343ef20f, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 47.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 729806763959394828, guid: c0433c0e6ad9c624e9f28571343ef20f, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 13.6
       objectReference: {fileID: 0}
     - target: {fileID: 2701992912285606642, guid: c0433c0e6ad9c624e9f28571343ef20f, type: 3}
       propertyPath: m_RootOrder
