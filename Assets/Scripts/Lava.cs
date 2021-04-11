@@ -21,7 +21,7 @@ public class Lava : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            GameObject.FindWithTag("Player").GetComponent<Player>().RelayHealth(-1);
+            other.GetComponent<Player>().Damage();
         }
     }
 

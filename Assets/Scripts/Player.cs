@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
 using System.Numerics;
+using UnityEditor.VersionControl;
 using UnityEngine;
 using Quaternion = UnityEngine.Quaternion;
 using Vector3 = UnityEngine.Vector3;
@@ -13,8 +14,8 @@ public class Player : MonoBehaviour
     [SerializeField] 
     private float _speed = 2f;
     Rigidbody rb;
-    
-    
+    public int _health = 5;
+
     [Header ("Jump Parameters")]
     public Vector3 jump;
     public float _jumpRate = 1f;
@@ -35,6 +36,8 @@ public class Player : MonoBehaviour
     {
         //starting point
         transform.position = new Vector3(10.8f, 1f, -11.6f);
+        
+        
         
         //Jump settings
         rb = GetComponent<Rigidbody>(); //assigning Rigidbody component
@@ -138,5 +141,18 @@ public class Player : MonoBehaviour
     public void RelayHealth(int health)
     {
         _uiManager.UpdateHealth(health);
+    }
+
+    public void Damage()
+    {
+        //reduce _lives by one
+        _health -= 1;
+        _uiManager.UpdateHealth(_health);
+        //if health is 0, destroy the player
+        if (_health == 0)
+        {
+            Destroy(this.gameObject);
+            _uiManager.ShowGameOver();
+        }
     }
 }
