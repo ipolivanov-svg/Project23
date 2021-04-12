@@ -28,8 +28,8 @@ public class Enemy : MonoBehaviour
         //if it's Fire
         else if (other.CompareTag("Blast"))
         {
-            Destroy(this.gameObject);
-            /*Damage();*/
+            /*Destroy(this.gameObject);*/
+            Damage();
             Destroy(other.gameObject);
         }
     }
