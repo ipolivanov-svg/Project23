@@ -19,10 +19,9 @@ public class HealthPowerup : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) 
-      //TODO: добавить && health <5   
+        if (other.CompareTag("Player"))  
         {
-            GameObject.FindWithTag("Player").GetComponent<Player>().RelayHealth(1);
+            GameObject.FindWithTag("Player").GetComponent<Player>().AddLife();
             Destroy(this.gameObject);
         }
     }
