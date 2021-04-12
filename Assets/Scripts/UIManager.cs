@@ -2,19 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
     public int _score = 0;
     public int _health = 5;
-    
-    [SerializeField] 
+
+    [SerializeField]
     private Text _scoreText;
-    [SerializeField] 
+    [SerializeField]
     private Text _healthText;
     [SerializeField]
     private Text _gameOverText;
-    [SerializeField] 
+    [SerializeField]
     private Text _gunFireText;
     [SerializeField] 
     private Text _finishWinText;
@@ -22,7 +23,7 @@ public class UIManager : MonoBehaviour
     private Text _finishLoseText;
     
     private Player _player;
-    
+
     void Start()
     {
         _score = PlayerPrefs.GetInt("Score", 0);
@@ -33,10 +34,10 @@ public class UIManager : MonoBehaviour
         _finishWinText.gameObject.SetActive(false);
         _finishLoseText.gameObject.SetActive(false);
     }
-    
+
     void Update()
     {
-        
+
     }
 
     public void AddScore(int score)
@@ -59,7 +60,7 @@ public class UIManager : MonoBehaviour
     {
         _gunFireText.gameObject.SetActive(true);
     }
-    
+
     private void OnDestroy()
     {
         PlayerPrefs.SetInt("Score", _score);
@@ -76,3 +77,9 @@ public class UIManager : MonoBehaviour
         _finishLoseText.gameObject.SetActive(true);
     }
 }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene("Menu");
+        }
+    }
