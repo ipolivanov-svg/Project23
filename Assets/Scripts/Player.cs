@@ -88,9 +88,9 @@ public class Player : MonoBehaviour
                 y: transform.position.y, z: -12f);
         }
         
-        //on y axis
+        /*//on y axis
         //so it won't fall down with the gravity on (need for jump)
-        else if(transform.position.y < 1f)
+        else if(transform.position.y > 1f)
         {
             transform.position = new Vector3(transform.position.x,
                 y: 1f, z: transform.position.z);
@@ -99,8 +99,8 @@ public class Player : MonoBehaviour
         else if (transform.position.y > 3f)
         {
             transform.position = new Vector3(transform.position.x,
-                y: 3f, z: transform.position.z);
-        }
+                y: 3f, z: transform.position.z);*/
+       // }
     }
     
     void OnCollisionStay(){
