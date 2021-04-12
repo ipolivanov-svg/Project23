@@ -2673,7 +2673,7 @@ GameObject:
   - component: {fileID: 2139334573}
   - component: {fileID: 2139334572}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: SceneTransition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2702,8 +2702,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.3232908, y: 2.2308881, z: 2.4198427}
+  m_Center: {x: 0.118804455, y: 0.61544406, z: -0.52780294}
 --- !u!23 &2139334574
 MeshRenderer:
   m_ObjectHideFlags: 0
