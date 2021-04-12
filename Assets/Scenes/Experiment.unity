@@ -2822,5 +2822,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8833413970625390709, guid: 44863ae7d2891fb4ebbd73ca4a5a8362, type: 3}
+      propertyPath: _poisonRate
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44863ae7d2891fb4ebbd73ca4a5a8362, type: 3}
