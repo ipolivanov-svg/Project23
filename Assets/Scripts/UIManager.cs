@@ -61,12 +61,6 @@ public class UIManager : MonoBehaviour
         _gunFireText.gameObject.SetActive(true);
     }
 
-    private void OnDestroy()
-    {
-        PlayerPrefs.SetInt("Score", _score);
-        PlayerPrefs.SetInt("Lives:", _health);
-    }
-
     public void FinishWin()
     {
         _finishWinText.gameObject.SetActive(true);
@@ -76,10 +70,13 @@ public class UIManager : MonoBehaviour
     {
         _finishLoseText.gameObject.SetActive(true);
     }
-}
-
     public void RestartGame()
     {
         SceneManager.LoadScene("Menu");
-        }
     }
+    void OnDestroy()
+    {
+        PlayerPrefs.SetInt("Score", _score);
+        PlayerPrefs.SetInt("Lives:", _health);
+    }
+}
