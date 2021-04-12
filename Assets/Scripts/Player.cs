@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
     [Header("PowerUp Parameters")]
     [SerializeField]
     public float _powerupTimeout = 10f;
-    public bool _isPowerUpOn  = true;
+    public bool _isPowerUpOn  = false;
 
     [Header("External")] 
     [SerializeField] 
@@ -41,9 +41,7 @@ public class Player : MonoBehaviour
     {
         //starting point
         transform.position = new Vector3(10.8f, 1f, -11.6f);
-        
-        
-        
+        _isPowerUpOn  = false;
         //Jump settings
         rb = GetComponent<Rigidbody>(); //assigning Rigidbody component
         jump = new Vector3(0f, 8f, 0f);
@@ -181,6 +179,18 @@ public class Player : MonoBehaviour
         {
             _uiManager.ShowGunFire();
             Fire();
+        }
+    }
+    
+    public void StartMessage()
+    {
+        if (_uiManager._score < 30)
+        {
+            _uiManager.FinishLose();
+        }
+        else if (_uiManager._score > 30)
+        {
+            _uiManager.FinishWin();
         }
     }
 }

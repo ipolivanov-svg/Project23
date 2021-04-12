@@ -16,6 +16,10 @@ public class UIManager : MonoBehaviour
     private Text _gameOverText;
     [SerializeField] 
     private Text _gunFireText;
+    [SerializeField] 
+    private Text _finishWinText;
+    [SerializeField] 
+    private Text _finishLoseText;
     
     private Player _player;
     
@@ -26,7 +30,8 @@ public class UIManager : MonoBehaviour
         _scoreText.text = "Score: " + _score;
         _healthText.text = "Lives: " + _health;
         _gameOverText.gameObject.SetActive(false);
-        _gunFireText.gameObject.SetActive(false);
+        _finishWinText.gameObject.SetActive(false);
+        _finishLoseText.gameObject.SetActive(false);
     }
     
     void Update()
@@ -59,5 +64,15 @@ public class UIManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("Score", _score);
         PlayerPrefs.SetInt("Lives:", _health);
+    }
+
+    public void FinishWin()
+    {
+        _finishWinText.gameObject.SetActive(true);
+    }
+
+    public void FinishLose()
+    {
+        _finishLoseText.gameObject.SetActive(true);
     }
 }

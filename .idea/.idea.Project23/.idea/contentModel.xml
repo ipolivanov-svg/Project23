@@ -19,6 +19,7 @@
           <e p="Enemy.cs" t="Include" />
           <e p="ExpSpawnManager.cs" t="Include" />
           <e p="Fire.cs" t="Include" />
+          <e p="GameStatus.cs" t="Include" />
           <e p="GunFire.cs" t="Include" />
           <e p="HealthPowerup.cs" t="Include" />
           <e p="Lava.cs" t="Include" />
@@ -26,8 +27,10 @@
           <e p="OrigSpawnManager.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="Poison.cs" t="Include" />
+          <e p="Princess.cs" t="Include" />
           <e p="Rock.cs" t="Include" />
           <e p="SceneTransition.cs" t="Include" />
+          <e p="SceneTransition2.cs" t="Include" />
           <e p="ShootingEnemy.cs" t="Include" />
           <e p="SpawnManagerL2.cs" t="Include" />
           <e p="SpawnManagerL3.cs" t="Include" />

@@ -4,12 +4,13 @@
     <list default="true" id="ddd889e4-76e4-4862-ad1e-6da43cffc9e0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project23/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project23/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project23/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project23/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Experiment.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Experiment.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Fire.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Fire.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GunFire.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GunFire.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnManagerL2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnManagerL2.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnManagerL3.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnManagerL3.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,23 +24,26 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ExpSpawnManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Aura.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GunFire.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Princess.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Lava.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Rock.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Fire.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/L3SpawnManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Poison.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Aura.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GunFire.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ExpSpawnManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SpawnManagerL3.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SpawnManagerL2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GunFire.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Coin.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Fire.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Princess.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1r2VrmbweIahti6yYzTpn4K8jAA" />
@@ -91,7 +95,7 @@
       <workItem from="1618174378225" duration="18000" />
       <workItem from="1618174575572" duration="7576000" />
       <workItem from="1618186986345" duration="5960000" />
-      <workItem from="1618224276980" duration="9301000" />
+      <workItem from="1618224276980" duration="18373000" />
     </task>
     <servers />
   </component>

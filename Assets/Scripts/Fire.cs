@@ -12,7 +12,6 @@ public class Fire : MonoBehaviour
     void Update()
     {
         Movement();
-        /*SetParent();*/
     }
 
     void Movement()
