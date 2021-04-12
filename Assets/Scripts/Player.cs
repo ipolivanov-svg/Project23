@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
         //Jump settings
         rb = GetComponent<Rigidbody>(); //assigning Rigidbody component
         jump = new Vector3(0f, 8f, 0f);
-        _jumpForce = 0.8f;
+        _jumpForce = 0.5f;
     }
     
     void Update()

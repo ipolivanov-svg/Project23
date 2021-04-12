@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
 
-public class SpawnManagerL2 : MonoBehaviour
+public class SpawnManagerL4 : MonoBehaviour
 {
     [Header ("Rock: parameters")]
     [SerializeField] private float _delay = 1f;
@@ -53,7 +53,7 @@ public class SpawnManagerL2 : MonoBehaviour
         {
             _nextLava = Time.time + _lavaRate;
             //CHANGE coordinates manually for every new position
-            Instantiate(_lavaPrefab, new Vector3(2.13000011f, 0.171885967f, -0.649999976f), Quaternion.identity, transform.parent = _lavaParent.transform);
+            Instantiate(_lavaPrefab, new Vector3(1.07000005f,0.129999995f,-3.75f), Quaternion.identity, transform.parent = _lavaParent.transform);
             yield return new WaitForSeconds(0.5f); 
         }
     }

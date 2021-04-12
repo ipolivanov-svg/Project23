@@ -4,7 +4,14 @@
     <list default="true" id="ddd889e4-76e4-4862-ad1e-6da43cffc9e0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project23/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project23/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project23/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project23/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level_Final.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level_Final.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnManagerL2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnManagerL2.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +22,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpawnManagerL4.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ExpSpawnManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Aura.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GunFire.cs" root0="FORCE_HIGHLIGHTING" />
@@ -31,13 +39,14 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ExpSpawnManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SpawnManagerL3.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/SpawnManagerL2.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GunFire.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Coin.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Fire.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Princess.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SpawnManagerL2.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SpawnManagerL4.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1r2VrmbweIahti6yYzTpn4K8jAA" />
@@ -89,7 +98,7 @@
       <workItem from="1618174378225" duration="18000" />
       <workItem from="1618174575572" duration="7576000" />
       <workItem from="1618186986345" duration="5960000" />
-      <workItem from="1618224276980" duration="19920000" />
+      <workItem from="1618224276980" duration="23002000" />
     </task>
     <servers />
   </component>
