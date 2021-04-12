@@ -177,7 +177,7 @@ public class Player : MonoBehaviour
     
     void GunOn()
     {
-        if (_isPowerUpOn)
+        if (_isPowerUpOn == true)
         {
             _uiManager.ShowGunFire();
             Fire();

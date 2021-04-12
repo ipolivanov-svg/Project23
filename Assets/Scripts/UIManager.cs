@@ -31,6 +31,7 @@ public class UIManager : MonoBehaviour
         _scoreText.text = "Score: " + _score;
         _healthText.text = "Lives: " + _health;
         _gameOverText.gameObject.SetActive(false);
+        _gunFireText.gameObject.SetActive(false);
         _finishWinText.gameObject.SetActive(false);
         _finishLoseText.gameObject.SetActive(false);
     }
