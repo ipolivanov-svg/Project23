@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     public Vector3 jump;
     public float _jumpRate = 1f;
     private float _nextJump = 0.0f;
-    public float _jumpForce = 0.8f;
+    public float _jumpForce = 0.5f;
     public bool _isGrounded;
     
     [Header ("Fire Parameters")]
