@@ -18,9 +18,8 @@
           <e p="Coin.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
           <e p="Fire.cs" t="Include" />
+          <e p="GunFire.cs" t="Include" />
           <e p="HealthPowerup.cs" t="Include" />
-          <e p="L2SpawnManager.cs" t="Include" />
-          <e p="L3SpawnManager.cs" t="Include" />
           <e p="Lava.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
           <e p="OrigSpawnManager.cs" t="Include" />
@@ -29,6 +28,8 @@
           <e p="Rock.cs" t="Include" />
           <e p="SceneTransition.cs" t="Include" />
           <e p="ShootingEnemy.cs" t="Include" />
+          <e p="SpawnManagerL2.cs" t="Include" />
+          <e p="SpawnManagerL3.cs" t="Include" />
           <e p="UIManager.cs" t="Include" />
         </e>
         <e p="SimplyPack" t="Include">

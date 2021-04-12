@@ -27,6 +27,11 @@ public class Player : MonoBehaviour
     public float _nextFire = -1f;
     public float _fireRate = 0.5f;
     public GameObject _firePrefab;
+    
+    [Header("PowerUp Parameters")]
+    [SerializeField]
+    public float _powerupTimeout = 10f;
+    public bool _isPowerUpOn  = true;
 
     [Header("External")] 
     [SerializeField] 
@@ -49,7 +54,7 @@ public class Player : MonoBehaviour
     {
         PlayerMovement();
         Jump();
-        Fire();
+        GunOn();
     }
     
     void PlayerMovement()
@@ -153,6 +158,28 @@ public class Player : MonoBehaviour
         {
             Destroy(this.gameObject);
             _uiManager.ShowGameOver();
+        }
+    }
+    
+    public void ActivatePowerUp()
+    {
+        Debug.Log("FireGun PowerUp is ON");
+        _isPowerUpOn = true;
+        StartCoroutine(DeactivatePowerUp());
+    }
+
+    IEnumerator DeactivatePowerUp()
+    {
+        yield return new WaitForSeconds(_powerupTimeout);
+        Debug.Log("FireGun PowerUp is OFF");
+        _isPowerUpOn = false;
+    }
+    
+    void GunOn()
+    {
+        if (_isPowerUpOn)
+        {
+            Fire();
         }
     }
 }
