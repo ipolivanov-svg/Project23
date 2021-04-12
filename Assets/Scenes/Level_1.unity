@@ -1241,6 +1241,8 @@ MonoBehaviour:
   _healthText: {fileID: 760445450}
   _gameOverText: {fileID: 1524611713}
   _gunFireText: {fileID: 0}
+  _finishWinText: {fileID: 0}
+  _finishLoseText: {fileID: 0}
 --- !u!4 &1019961881 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7445188285551786179, guid: b945bff1ece46764090edc16f82e5bdc, type: 3}
@@ -1732,6 +1734,10 @@ PrefabInstance:
       propertyPath: _uiManager
       value: 
       objectReference: {fileID: 912437466}
+    - target: {fileID: 8798512096805531801, guid: d9544144b9fcd3841ad75b87d3fb56a6, type: 3}
+      propertyPath: _isPowerUpOn
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9544144b9fcd3841ad75b87d3fb56a6, type: 3}
 --- !u!1 &1444172372
