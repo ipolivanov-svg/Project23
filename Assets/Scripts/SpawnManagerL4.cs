@@ -53,7 +53,7 @@ public class SpawnManagerL4 : MonoBehaviour
         {
             _nextLava = Time.time + _lavaRate;
             //CHANGE coordinates manually for every new position
-            Instantiate(_lavaPrefab, new Vector3(1.07000005f,0.129999995f,-3.75f), Quaternion.identity, transform.parent = _lavaParent.transform);
+            Instantiate(_lavaPrefab, new Vector3(1.19000006f,0.065363884f,-0.889999986f), Quaternion.identity, transform.parent = _lavaParent.transform);
             yield return new WaitForSeconds(0.5f); 
         }
     }
