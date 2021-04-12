@@ -179,6 +179,7 @@ public class Player : MonoBehaviour
     {
         if (_isPowerUpOn)
         {
+            _uiManager.ShowGunFire();
             Fire();
         }
     }

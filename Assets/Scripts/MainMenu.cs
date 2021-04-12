@@ -15,4 +15,9 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Quit!");
         Application.Quit();
     }
+    
+    public void DeleteKey(string score)
+    {
+        PlayerPrefs.DeleteKey("Score");
+    }
 }

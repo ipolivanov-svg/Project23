@@ -17,6 +17,7 @@
           <e p="Aura.cs" t="Include" />
           <e p="Coin.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
+          <e p="ExpSpawnManager.cs" t="Include" />
           <e p="Fire.cs" t="Include" />
           <e p="GunFire.cs" t="Include" />
           <e p="HealthPowerup.cs" t="Include" />

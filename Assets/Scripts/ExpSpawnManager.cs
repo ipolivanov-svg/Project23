@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
 
-public class SpawnManagerL2 : MonoBehaviour
+public class ExpSpawnManager : MonoBehaviour
 {
     [Header ("Rock: parameters")]
     [SerializeField] private float _delay = 1f;
