@@ -33,7 +33,7 @@ public class Rock : MonoBehaviour
         //setting the borders
         //TODO: возможно надо подумать, как сделать посимпатичнее этот момент
         
-        if(transform.position.x >19.5f)
+        if(transform.position.x > 11.99f)
         {
             Destroy(this.gameObject);
         }

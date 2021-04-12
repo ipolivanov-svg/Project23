@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 2129665078959036081}
   - component: {fileID: 2781837559588977046}
   m_Layer: 0
-  m_Name: FirePrefab
+  m_Name: Fire
   m_TagString: Blast
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -185,7 +185,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4751125451533022886}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -203,4 +203,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speedFire: 4
-  _parent: {fileID: 0}
