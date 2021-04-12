@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
     [Header("PowerUp Parameters")]
     [SerializeField]
     public float _powerupTimeout = 10f;
-    public bool _isPowerUpOn  = true;
+    public bool _isPowerUpOn  = false;
 
     [Header("External")] 
     [SerializeField] 
@@ -143,11 +143,6 @@ public class Player : MonoBehaviour
         _uiManager.AddScore(score);
     }
 
-    public void RelayHealth(int health)
-    {
-        _uiManager.UpdateHealth(health);
-    }
-
     public void Damage()
     {
         //reduce _lives by one
@@ -160,7 +155,14 @@ public class Player : MonoBehaviour
             _uiManager.ShowGameOver();
         }
     }
-    
+
+    public void AddLife()
+    {
+        //reduce _lives by one
+        _health += 1;
+        _uiManager.UpdateHealth(_health);
+    }
+
     public void ActivatePowerUp()
     {
         Debug.Log("FireGun PowerUp is ON");

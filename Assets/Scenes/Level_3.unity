@@ -4175,5 +4175,9 @@ PrefabInstance:
       propertyPath: _uiManager
       value: 
       objectReference: {fileID: 912437466}
+    - target: {fileID: 8798512096805531801, guid: d9544144b9fcd3841ad75b87d3fb56a6, type: 3}
+      propertyPath: _isPowerUpOn
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9544144b9fcd3841ad75b87d3fb56a6, type: 3}
