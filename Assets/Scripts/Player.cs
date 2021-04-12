@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
 using System.Numerics;
+using UnityEditor.VersionControl;
 using UnityEngine;
 using Quaternion = UnityEngine.Quaternion;
 using Vector3 = UnityEngine.Vector3;
@@ -13,35 +14,45 @@ public class Player : MonoBehaviour
     [SerializeField] 
     private float _speed = 2f;
     Rigidbody rb;
-    
+    public int _health = 5;
+
     [Header ("Jump Parameters")]
     public Vector3 jump;
     public float _jumpRate = 1f;
     private float _nextJump = 0.0f;
-    public float _jumpForce = 0.8f;
+    public float _jumpForce = 0.5f;
     public bool _isGrounded;
     
     [Header ("Fire Parameters")]
     public float _nextFire = -1f;
     public float _fireRate = 0.5f;
     public GameObject _firePrefab;
+    
+    [Header("PowerUp Parameters")]
+    [SerializeField]
+    public float _powerupTimeout = 10f;
+    public bool _isPowerUpOn  = false;
+
+    [Header("External")] 
+    [SerializeField] 
+    private UIManager _uiManager;
 
     void Start()
     {
         //starting point
-        transform.position = new Vector3(0f, 1f, 0f);
-        
+        transform.position = new Vector3(10.8f, 1f, -11.6f);
+        _isPowerUpOn  = false;
         //Jump settings
         rb = GetComponent<Rigidbody>(); //assigning Rigidbody component
         jump = new Vector3(0f, 8f, 0f);
-        _jumpForce = 0.8f;
+        _jumpForce = 0.5f;
     }
     
     void Update()
     {
         PlayerMovement();
         Jump();
-        Fire();
+        GunOn();
     }
     
     void PlayerMovement()
@@ -57,32 +68,32 @@ public class Player : MonoBehaviour
         
         //setting the borders
         //on x axis
-        if(transform.position.x >19.5f)
+        if(transform.position.x >11.99f)
         {
-            transform.position = new Vector3(19.5f,
+            transform.position = new Vector3(11.99f,
                 y: transform.position.y, z: transform.position.z);
         }
-        else if(transform.position.x < -19.5f)
+        else if(transform.position.x < -11.99f)
         {
-            transform.position = new Vector3(-19.5f,
+            transform.position = new Vector3(-11.99f,
                 y: transform.position.y, z: transform.position.z);
         }
         
         //on z axis
-        else if(transform.position.z > 19.5f)
+        else if(transform.position.z > 12f)
         {
             transform.position = new Vector3(transform.position.x,
-                y: transform.position.y, z: 19.5f);
+                y: transform.position.y, z: 12f);
         }
-        else if(transform.position.z < -19.5f)
+        else if(transform.position.z < -12f)
         {
             transform.position = new Vector3(transform.position.x,
-                y: transform.position.y, z: -19.5f);
+                y: transform.position.y, z: -12f);
         }
         
-        //on y axis
+        /*//on y axis
         //so it won't fall down with the gravity on (need for jump)
-        else if(transform.position.y < 1f)
+        else if(transform.position.y > 1f)
         {
             transform.position = new Vector3(transform.position.x,
                 y: 1f, z: transform.position.z);
@@ -91,8 +102,8 @@ public class Player : MonoBehaviour
         else if (transform.position.y > 3f)
         {
             transform.position = new Vector3(transform.position.x,
-                y: 3f, z: transform.position.z);
-        }
+                y: 3f, z: transform.position.z);*/
+       // }
     }
     
     void OnCollisionStay(){
@@ -100,6 +111,7 @@ public class Player : MonoBehaviour
         //when the Player is on the ground isGrounded = true
         _isGrounded = true;
     }
+    
     void Jump()
     {
         //creating a jump
@@ -112,7 +124,7 @@ public class Player : MonoBehaviour
             _nextJump = Time.time + _jumpRate;
         }
     }
-
+    
     void Fire()
     {
         if(Input.GetKeyDown(KeyCode.P) && Time.time > _nextFire)
@@ -121,6 +133,66 @@ public class Player : MonoBehaviour
             _nextFire = Time.time + _fireRate;
             Instantiate(_firePrefab, transform.position + new Vector3(-0.1f, 1f, 0.5f),
                 Quaternion.identity);
+        }
+    }
+
+    public void RelayScore(int score)
+    {
+        _uiManager.AddScore(score);
+    }
+
+    public void Damage()
+    {
+        //reduce _lives by one
+        _health -= 1;
+        _uiManager.UpdateHealth(_health);
+        //if health is 0, destroy the player
+        if (_health == 0)
+        {
+            Destroy(this.gameObject);
+            _uiManager.ShowGameOver();
+        }
+    }
+
+    public void AddLife()
+    {
+        //reduce _lives by one
+        _health += 1;
+        _uiManager.UpdateHealth(_health);
+    }
+
+    public void ActivatePowerUp()
+    {
+        Debug.Log("FireGun PowerUp is ON");
+        _isPowerUpOn = true;
+        StartCoroutine(DeactivatePowerUp());
+    }
+
+    IEnumerator DeactivatePowerUp()
+    {
+        yield return new WaitForSeconds(_powerupTimeout);
+        Debug.Log("FireGun PowerUp is OFF");
+        _isPowerUpOn = false;
+    }
+    
+    void GunOn()
+    {
+        if (_isPowerUpOn)
+        {
+            _uiManager.ShowGunFire();
+            Fire();
+        }
+    }
+    
+    public void StartMessage()
+    {
+        if (_uiManager._score < 30)
+        {
+            _uiManager.FinishLose();
+        }
+        else if (_uiManager._score > 30)
+        {
+            _uiManager.FinishWin();
         }
     }
 }

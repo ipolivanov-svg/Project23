@@ -9,10 +9,7 @@ public class Rock : MonoBehaviour
 {
     [Header("Characteristics")] 
     [SerializeField]
-    private float _speed = 4f;
-    private float _nextRock = -1f;
-    private float _rockRate = 1f;
-    public GameObject _rockPrefab;
+    private float _speed = 6f;
     
     // Start is called before the first frame update
     void Start()
@@ -29,21 +26,16 @@ public class Rock : MonoBehaviour
     //movement only in the right direction
     void Movement()
     {
-        transform.Rotate(new Vector3(0f, 0f, 3f * Time.deltaTime), Space.Self);
+        //TODO: add rotation
+        
         transform.Translate(Vector3.right * _speed * Time.deltaTime);
 
         //setting the borders
         //TODO: возможно надо подумать, как сделать посимпатичнее этот момент
-        if(transform.position.x >19.5f)
+        
+        if(transform.position.x > 11.99f)
         {
             Destroy(this.gameObject);
-        }
-    
-    //range
-    if(Time.time > _nextRock)
-        {
-            _nextRock = Time.time + _rockRate;
-            Instantiate(_rockPrefab, transform.position + new Vector3(-5f, 0f, 0f), Quaternion.identity);
         }
     }
 
@@ -52,20 +44,18 @@ public class Rock : MonoBehaviour
         //if it collides with Player
         if (other.CompareTag("Player"))
         {
-            Destroy(other.gameObject);
+            other.GetComponent<Player>().Damage();
+            Destroy(this.gameObject);
         }
         //if it's Fire
         else if (other.CompareTag("Blast"))
         {
-            if (other.name.Contains("Fire"))
-            { //destroys the vaccine if only it's not UV
-                Destroy(this.gameObject);
-            }
-            //TODO: думала сделать еще вариант плеваться кислотой, от которой камню урона нет
-            
-            //in both conditions blast is gone after collision
+            Destroy(this.gameObject);
             Destroy(other.gameObject);
-            
+        }
+        else if (other.CompareTag("Surroundings"))
+        {
+            Destroy(this.gameObject);
         }
     }
 }
